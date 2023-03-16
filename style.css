@@ -7,19 +7,13 @@ body {
     font-family: 'Kalam', cursive;
 }
 
-.header-hero {
-    position: relative;
-    overflow: hidden;
-  }
+* {
+  margin: 0;
+}
 
-#back-vid{
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+.header-hero {
+    background-color: black;
+    height: 90vh;
   }
 
 header {
@@ -74,8 +68,8 @@ header {
   }
   
   nav a:hover {
-    color: #21A6FE;
-    border-bottom: 3px solid #21A6FE;
+    color: #F1813B;
+    border-bottom: 3px solid #F1813B;
   }
   
   h2 {
@@ -83,15 +77,14 @@ header {
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
   #hero {
-    /* background-image: url('./images/hero-bg.jpeg'); */
     background-size: cover;
     background-position: center;
     height: 600px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
     align-items: center;
   }
@@ -101,7 +94,6 @@ header {
     color: #ffffff;
     max-width: 600px;
     padding: 40px;
-    background-color: rgba(121, 121, 121, 0.083);
     border-radius: 10px;
   }
   
@@ -114,13 +106,28 @@ header {
   .hero-content p {
     font-size: 24px;
     line-height: 1.5;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+  span {
+    color:#F1813B;
+    font-family: 'Bebas Neue';
   }
   
   .cta-button {
-    background-color: #146194;
-    color: #ffffff;
+    background-color: #F1813B;
+    color: black;
     border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Bebas Neue';
+  }
+  .cta-button-empty{
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #F1813B;
     padding: 10px 20px;
     font-size: 24px;
     border-radius: 4px;
@@ -130,40 +137,79 @@ header {
   }
   
   .cta-button:hover {
-    background-color: #117070;
+    background-color: #EC583C;
+    color: white;
   }
 
   .features-heading {
-    margin-top: 45px;
+    padding-top: 80px;
     text-align: center;
     font-size: 40px;
+    color: white;
   }
+
+  #features {
+    background-image: url('./images/section-bg.jpeg');
+    background-size: cover;
+  }
+  .overlay {
+    background-color: #2a28287d;
+    padding: 50px 10px;
+  }
+  
   .features {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin-top: 35px;
-    margin-bottom: 100px;
+    align-items: flex-end;
+    padding-top: 35px;
+    padding-bottom: 100px;
     color: white;
+    padding:35px 20px 100px 20px;
   }
   
   .feature {
     text-align: center;
-    max-width: 400px;
-    margin: 0 20px;
-    height: 320px;
-    margin: 10px;
+    width: 30%;
     padding: 30px;
-    border-radius: 20px;
-    background-color: #146194;
+    height: 300px;
+    background-color: #F1813B;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
+  .feature:first-child, .feature:nth-child(3){
+    height: 250px;
+    text-align: left;
+    flex-grow: 2;
+    background-color: black;
+  }
+
+  .feature:first-child{
+    border: 1px solid rgb(47, 46, 46);
+    background-color: rgba(29, 29, 29, 0.774);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .feature:nth-child(3){
+    border: 1px solid rgb(45, 44, 44);
+    background-color: rgba(29, 29, 29, 0.774);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0px;
+  }
+
   
   .feature i {
     color: white;
     margin-bottom: 20px;
   }
   .feature i:hover {
-    color: #21A6FE;
+    color: #EC583C;
   }
   
   .feature h3 {
@@ -264,7 +310,8 @@ header {
   }
   
   button:hover {
-    background-color: #0d5f5f;
+    background-color: #EC583C;
+    border: none;
   }
   
   .contact-container {
@@ -282,6 +329,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
   }
   footer h3 {
     font-size: 24px;
@@ -323,6 +371,9 @@ header {
     nav {
       margin-top: 10px;
     }
+    nav ul {
+      flex-wrap: wrap;
+    }
     
     nav li {
       flex-direction: column;
@@ -345,6 +396,13 @@ header {
         padding: 20px;
         background-color: #ffffff96;
     }
+    #news-feed {
+      flex-direction: column;
+    }
+    .footer-container {
+      flex-direction: column;
+      justify-content: center;
+    }  
   }
 
 
