@@ -153,8 +153,8 @@ header {
     background-size: cover;
   }
   .overlay {
-    background-color: #2a28287d;
-    padding: 50px 10px;
+    background:linear-gradient(rgba(86, 79, 79, 0.529),rgba(0, 0, 0, 0.621));
+    padding: 80px 10px;
   }
   
   .features {
@@ -168,7 +168,7 @@ header {
   }
   
   .feature {
-    text-align: center;
+    text-align: left;
     width: 30%;
     padding: 30px;
     height: 300px;
@@ -179,6 +179,7 @@ header {
     border-bottom: none;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    padding-bottom: 40px;
   }
   .feature:first-child, .feature:nth-child(3){
     height: 250px;
@@ -205,11 +206,11 @@ header {
 
   
   .feature i {
-    color: white;
+    color: black;
     margin-bottom: 20px;
   }
-  .feature i:hover {
-    color: #EC583C;
+  .feature:first-child > i, .feature:nth-child(3) > i{
+    color: #ffffff;
   }
   
   .feature h3 {
@@ -224,19 +225,31 @@ header {
   }
 
   #about {
-    background-image: url(./images/bitcoin.jpeg);
-    background-position: left center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 50px 10px;
+    /* background-image: url(./images/bitcoin.jpeg); */
+    background-color: rgb(237, 237, 237);
+    padding: 100px 30px;
+  }
+  .about-heading {
+    text-align: left;
+    margin-bottom: 0px;
   }
   .about-content {
     display: flex;
-    flex-direction: column;
-    margin-left: 50vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     padding: 20px;
   }
+  .about-content > div {
+    width: 400px;
+  }
+  h3 {
+    padding-top: 20px;
+  }
 
+  .about-img{
+    width: 550px;
+  }
 
   #news-feed {
     display: flex;
@@ -363,7 +376,13 @@ header {
       flex-direction: column;
       padding: 20px;
     }
-    
+    .header-hero {
+      height: auto;
+    }
+    #hero {
+      flex-direction: column;
+      height: auto;
+    }
     .logo {
       margin-bottom: 20px;
     }
@@ -384,17 +403,30 @@ header {
     }
 
     .feature {
-        text-align: center;
         height: 250px;
+        width: auto;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .feature:first-child{
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 0px;
+    }
+    
+    .feature:nth-child(3){
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
     }
 
     #about {
         background-size: 250px;
     }
     .about-content {
-        margin-left: 40vw;
-        padding: 20px;
-        background-color: #ffffff96;
+        
+       flex-direction: column;
     }
     #news-feed {
       flex-direction: column;
