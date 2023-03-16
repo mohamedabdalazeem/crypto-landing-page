@@ -1,4 +1,4 @@
-fetch('http://api.mediastack.com/v1/news?access_key=b60c31dd1ec7c871d8ac2597bd30f128&keywords=crypto')
+fetch('https://api.mediastack.com/v1/news?access_key=b60c31dd1ec7c871d8ac2597bd30f128&keywords=crypto')
 .then(res => res.json())
 .then(data => {
   // Get the top 3 articles
