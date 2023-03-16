@@ -1,17 +1,22 @@
-fetch('https://newsapi.org/v2/everything?q=crypto&sortBy=popularity&apiKey=14733153d5d0416d8505da08f0382577')
+fetch('http://api.mediastack.com/v1/news?access_key=b60c31dd1ec7c871d8ac2597bd30f128&keywords=crypto')
 .then(res => res.json())
 .then(data => {
   // Get the top 3 articles
-  const articles = data.articles.sort(() => Math.random() - 0.5).slice(0, 3);
-
+  const articles = data.data.sort(() => Math.random() - 0.5).slice(0, 3);
+  console.log(data)
   // Render each article to the news feed
   articles.forEach(article => {
-    const {title, url, urlToImage} = article;
+    const {title, url, image} = article;
     const articleContainer = document.createElement('div');
     articleContainer.classList.add('article-container');
 
     const articleImage = document.createElement('img');
-    articleImage.src = urlToImage;
+    if(image) {
+      articleImage.src = image;
+    }else {
+      articleImage.src = './images/placeholder.jpg'
+    }
+    
     articleImage.alt = title;
     articleImage.classList.add('article-image');
     articleContainer.appendChild(articleImage);
