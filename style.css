@@ -13,7 +13,7 @@ body {
 
 .header-hero {
     background-color: black;
-    height: 90vh;
+   padding: 40px 10px;
   }
 
 header {
@@ -82,7 +82,7 @@ header {
   #hero {
     background-size: cover;
     background-position: center;
-    height: 600px;
+
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -123,6 +123,7 @@ header {
     cursor: pointer;
     transition: background-color 0.2s;
     font-family: 'Bebas Neue';
+    margin-bottom: 5px;
   }
   .cta-button-empty{
     background-color: #000000;
@@ -240,6 +241,7 @@ header {
     padding: 20px;
   }
   .about-content > div {
+    padding: 30px;
     width: 400px;
   }
   h3 {
@@ -344,7 +346,7 @@ header {
   
   button:hover {
     background-color: #EC583C;
-    border: none;
+    
   }
   
   .contact-container {

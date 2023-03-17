@@ -1,14 +1,12 @@
 fetch('https://newsapi.org/v2/everything?q=crypto&sortBy=popularity&apiKey=14733153d5d0416d8505da08f0382577')
 .then(res => res.json())
 .then(data => {
-  console.log(data.articles)
   let articles
   if(data.articles){
      articles = data.articles.sort(() => Math.random() - 0.5).slice(0, 3);
      renderArticles(articles)
   }else {
-     articles = reservedArticles
-     articles = data.articles.sort(() => Math.random() - 0.5).slice(0, 3);
+     articles = reservedArticles.sort(() => Math.random() - 0.5).slice(0, 3);
      renderArticles(articles)
   }
   
