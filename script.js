@@ -8,6 +8,7 @@ fetch('https://newsapi.org/v2/everything?q=crypto&sortBy=popularity&apiKey=14733
      renderArticles(articles)
   }else {
      articles = reservedArticles
+     articles = data.articles.sort(() => Math.random() - 0.5).slice(0, 3);
      renderArticles(articles)
   }
   
@@ -47,6 +48,11 @@ const renderArticles = (articles) => {
     document.getElementById('news-feed').appendChild(articleContainer);
   });
 }
+
+
+
+
+
 const reservedArticles =
 [
   {

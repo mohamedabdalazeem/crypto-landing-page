@@ -225,7 +225,6 @@ header {
   }
 
   #about {
-    /* background-image: url(./images/bitcoin.jpeg); */
     background-color: rgb(237, 237, 237);
     padding: 100px 30px;
   }
@@ -250,7 +249,13 @@ header {
   .about-img{
     width: 550px;
   }
-
+  #news {
+    padding: 70px 10px;
+    background:linear-gradient(rgb(0, 0, 0),black);
+    background-image: url('/images/news-bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   #news-feed {
     display: flex;
     flex-wrap: wrap;
@@ -260,32 +265,43 @@ header {
   .article-container {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: #F1813B;
+    border: 1px solid black;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 20px;
+  }
+  #news > h2 {
+    color: white;
+    margin: 20px 10px;
   }
   
   .article-image {
     width: 100%;
-    height: auto;
+    height: 300px;
     margin-bottom: 10px;
+    border-radius: 20px;
   }
   
   .article-title {
     font-size: 18px;
     margin-bottom: 10px;
+    margin-top: 20px;
+    color: white;
   }
   
   .article-link {
     display: block;
-    color: #0066c0;
+    color: black;
     text-decoration: none;
     font-weight: bold;
   }
-  
+  .article-link:hover{
+    text-decoration: underline;
+  }
   #contact {
-    background-color: #146194;
+    background-color: black;
+    background-position: center center;
     padding: 100px 0;
     color: white;
   }
@@ -309,12 +325,16 @@ header {
     margin-bottom: 20px;
     border-radius: 5px;
     border: none;
+    background-color: #000000;
+    border-bottom: 1px solid gray;
+    color: #F1813B;
+    font-family: 'Bebas Neue';
   }
   
   button {
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #117070;
+    background-color: #F1813B;
     color: #ffffff;
     border-radius: 5px;
     border: none;
@@ -328,13 +348,17 @@ header {
   }
   
   .contact-container {
+
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0 20px;
+  }
+  .contact-img{
+    width: 500px;
   }
 
   footer {
-    background-color: #333333;
+    background-color: black;
     color: #ffffff;
     padding: 50px 0;
   }
@@ -356,16 +380,24 @@ header {
     justify-content: space-between;
     max-width: 200px;
     margin-bottom: 20px;
+    
   }
   
   .social-icons a {
     color: #ffffff;
     font-size: 24px;
     text-decoration: none;
+    color: #F1813B;
   }
   
   .social-icons a:hover {
-    color: #cccccc;
+    color: #EC583C;
+  }
+  .footer-col{
+    text-align: left;
+  }
+  .footer-col > p > i{
+    color: #F1813B;
   }
   
   
@@ -435,6 +467,9 @@ header {
       flex-direction: column;
       justify-content: center;
     }  
+    .footer-col{
+      text-align: center;
+    }
   }
 
 
